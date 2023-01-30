@@ -26,7 +26,7 @@
             <div class="col-lg-8">
                 <!-- Post content-->
                 <% for(const article of rows){ %>
-                <article>
+                    <div style=" display:inline-block; margin: 1em 0 1em ; position: relative; border-radius: 10px; border: 2px solid #ccc; font-size: 100%; padding: 20px; "><span style=" position: absolute; display: block; right: -15px; top: 20px; border-left: 15px solid #ccc; border-top: 15px solid transparent; border-bottom: 15px solid transparent; width: 0; height: 0; "></span>
                     <!-- Post header-->
                     <header class="mb-4">
                         <!-- Post title-->
@@ -35,17 +35,17 @@
                         <div class="text-muted fst-italic mb-2">Posted on [<%=article.created_at.toISOString().slice(0, 19).replace('T',' ') %>] by [<%=article.auther_name %>]</div>
                     </header>
                     <!-- Post content-->
-                    <section class="mb-5">
-                        <p class="fs-5 mb-4"><%=article.article_body %></p>
+                    <section class="mb-5" >
+                        <p  class="fs-5 mb-4" style="margin: 0px;padding: 0px; "><%=article.article_body %></p>
                     </section>
-                    <div class="text-end"style="padding: 15px;">
+                    <div class="text-end"style="padding: 15px;  ">
                         <form action="/blog/delete/<%= article.id %>" method="POST">
                             <input type="button" onclick="location.href='/blog/edit/<%= article.id %>'" value="Edit">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="submit" value="Delete">
                         </form>
                     </div>
-                </article>
+                </article><span style="position: absolute; display: block; right: -12px; top: 20px; border-left: 15px solid #fff; border-top: 15px solid transparent; border-bottom: 15px solid transparent; width: 0; height: 0; "></span></div><article></article>
                 <% } %>
                 <!-- Comments section-->
                 <section class="mb-5">
@@ -84,7 +84,7 @@
     </div>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; MEGA difficult project 2023</p></div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
