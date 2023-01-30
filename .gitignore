@@ -1,1 +1,7 @@
+#third party modules
 BasicModel/node_modules/
+MVCModel/node_modules/
+
+#dotenv
+BasicModel/.env
+MVCModel/.env

@@ -42,7 +42,7 @@ connection.connect((err) => {
     if(!app.get('loginResult')){
       res.render('login.ejs',{existMessage:false,message:"''"});
     }else if(app.get('loginResult') == "notExistUser"){
-      res.render('login.ejs',{existMessage:true,message:"'user was not found くそが'"});
+      res.render('login.ejs',{existMessage:true,message:"'user was not found'"});
       
     }else if(app.get('loginResult') == "incorrectPwd"){
       res.render('login.ejs',{existMessage:true,message:"'passsword is incorrect'"});

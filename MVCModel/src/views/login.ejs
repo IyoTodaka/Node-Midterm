@@ -11,23 +11,16 @@
     <div class="login"style="margin: 5%;">
         <form class="text-center" method="POST">
             <h1 style="margin: 2%;">Blog Service</h1>
-            <p><input name="loginId" type="text" placeholder="Login ID" required autofocus></p>
-            <p><input name="loginPwd" type="password" placeholder="Password" required></p>
-            <p><input class="btn btn-outline-primary" type="submit"></input></p>
+            <p><input name="login_name" type="text" placeholder="Login ID" required autofocus></p>
+            <p><input name="password" type="password" placeholder="Password" required></p>
+            <p><input class="btn btn-outline-primary" type="submit" value="LOGIN"></input></p>
         </form>
         <div class="text-center">
             <p>Dont have an account yet?</p>
-            <a href="/register">Register</a>
+            <a href="/user/register">Register</a>
         </div>  
         
     </div>
-    <script>
-        let existMessage = "<%= existMessage %>"
-        let message = "<%- message %>"
-
-        if(existMessage){
-            alert(message)
-        }
-    </script>
+    <%- message %>
 </body>
 </html>
