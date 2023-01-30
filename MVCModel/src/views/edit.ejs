@@ -18,7 +18,9 @@
                         <div class="card-body">
                             <!-- Article form-->
                             <form class="mb-4" method="POST">
-                                <textarea class="form-control" rows="1" placeholder="title" name="article_title"><%= article.article_title%></textarea>
+                                <div class="card-body">
+                                    <textarea class="form-control" rows="1" placeholder="title" name="article_title"><%= article.article_title%></textarea>
+                                </div>
                                 <div class="card-body">
                                     <textarea class="form-control" rows="12" placeholder="article" name="article_body"><%= article.article_body%></textarea>
                                 </div>
